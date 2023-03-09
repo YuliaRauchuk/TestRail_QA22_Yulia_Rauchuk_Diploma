@@ -2,6 +2,7 @@ package pages.models;
 
 import lombok.Builder;
 import lombok.Data;
+import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
 
@@ -9,13 +10,19 @@ import java.util.Objects;
 @Builder
 
 public class TestRun {
-
-    private String name;
-    private String references;
-    private String milestones;
-    private String assignTo;
-    private String description;
-
+    public TestRun (String name, String references, String milestones, String assignTo, String description) {
+        super();
+        this.name = name;
+        this.references = references;
+        this.milestones = milestones;
+        this.assignTo = assignTo;
+        this.description = description;
+    }
+    private final String name;
+    private final String references;
+    private final String milestones;
+    private final String assignTo;
+    private final String description;
 
     public TestRun (TestRunBuilder testRunBuilder) {
 

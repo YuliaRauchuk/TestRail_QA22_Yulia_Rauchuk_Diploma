@@ -9,10 +9,11 @@ import pages.HomePage;
 import pages.elements.DropDown;
 import pages.elements.Input;
 import pages.elements.TextArea;
+import pages.models.Milestones;
 
 
 @Log4j2
-    public class AddMilestonesPage<Milestones> extends HomePage {
+    public class AddMilestonesPage extends HomePage {
 
 
     private final static By ADD_MILESTONES_BUTTON= By.cssSelector("//div//a[@id='navigation-milestones-add']//span");
@@ -24,8 +25,9 @@ import pages.elements.TextArea;
         driver.findElement(ADD_MILESTONES_BUTTON).sendKeys(value);
     }
     @Override
-    public void waitForPageLoaded() {
+    public byte[] waitForPageLoaded() {
 
+        return new byte[0];
     }
     @Step("fillForm Milestones")
     @Attachment(value = "screenshot", type = "image/png")

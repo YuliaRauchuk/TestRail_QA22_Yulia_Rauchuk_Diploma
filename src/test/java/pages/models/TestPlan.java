@@ -3,6 +3,7 @@ package pages.models;
 
 import lombok.Builder;
 import lombok.Data;
+import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
 
@@ -10,9 +11,15 @@ import java.util.Objects;
 @Builder
 
 public class TestPlan {
-    private String name;
-    private String milestone;
-    private String description;
+    public TestPlan (String name, String milestone, String description) {
+        super();
+        this.name = name;
+        this.milestone = milestone;
+        this.description = description;
+    }
+    private final String name;
+    private final String milestone;
+    private final String description;
 
     public TestPlan (TestPlanBuilder testPlanBuilder) {
 

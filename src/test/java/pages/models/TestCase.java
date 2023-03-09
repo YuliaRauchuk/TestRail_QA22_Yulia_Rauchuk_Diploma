@@ -5,6 +5,7 @@ import enums.Priority;
 import enums.Type;
 import lombok.Builder;
 import lombok.Data;
+import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;
 
@@ -13,7 +14,19 @@ import java.util.Objects;
 @Builder
 
     public class TestCase {
-
+    public TestCase (String title, String section, Type type, Priority priority, String estimate, String references, AutomationType automationType, String preconditions, String steps, String expectedResult) {
+        super();
+        this.title = title;
+        this.section = section;
+        this.type = type;
+        this.priority = priority;
+        this.estimate = estimate;
+        this.references = references;
+        this.automationType = automationType;
+        this.preconditions = preconditions;
+        this.steps = steps;
+        this.expectedResult = expectedResult;
+    }
     private final String title;
     private final String section;
     private final Type type;

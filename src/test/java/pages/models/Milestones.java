@@ -2,6 +2,8 @@ package pages.models;
 
 import lombok.Builder;
 import lombok.Data;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.DataProvider;
 
 import java.util.Objects;
 
@@ -9,12 +11,22 @@ import java.util.Objects;
 @Builder
 
 public class Milestones {
-    private String name;
-    private String references;
-    private String parent;
-    private String description;
-    private String startDate;
-    private String endDate;
+    public Milestones(String name, String references, String parent, String description, String startDate, String endDate) {
+        super();
+        this.name = name;
+        this.references = references;
+        this.parent = parent;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+    private final String name;
+    private final String references;
+    private final String parent;
+    private final String description;
+    private final String startDate;
+    private final String endDate;
 
 
     public Milestones (MilestonesBuilder milestonesBuilder) {
@@ -38,7 +50,6 @@ public class Milestones {
                 ", endDate=" + endDate +
                 '}';
     }
-
         @Override
         public int hashCode() {
             return Objects.hash(name, references, parent, description, startDate, endDate);
@@ -55,5 +66,19 @@ public class Milestones {
                     && Objects.equals(description, milestones.description)
                     && Objects.equals(startDate, milestones.startDate)
                     && Objects.equals(endDate, milestones.endDate);
+    }
+
+    @DataProvider(name="Milestones")
+    public static Object[][] milestoneTestData() {
+        return new Milestones[][]{
+                {Milestones.builder()
+                        .name("")
+                        .references("")
+                        .parent("")
+                        .description("")
+                        .startDate("")
+                        .endDate("").build()
+                }
+        };
     }
 }
