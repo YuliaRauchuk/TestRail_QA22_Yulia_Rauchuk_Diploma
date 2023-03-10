@@ -9,10 +9,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
-import pages.AddNewProjectPage;
 import java.util.concurrent.TimeUnit;
 
-public class BaseTests {
+public  abstract class BaseTests {
 
 
     protected WebDriver driver;
@@ -26,6 +25,7 @@ public class BaseTests {
     protected TestRunResultsPage testRunResultsPage;
     protected TestPlanPage testPlanPage;
     protected AddTestPlanPage addTestPlanPage;
+
 
 
     @BeforeClass(alwaysRun = true)
@@ -58,6 +58,10 @@ public class BaseTests {
     @AfterClass(alwaysRun = true)
     public void tearDown() {
         driver.quit();}
+
+    protected boolean isErrorMessagePresent() {
+        return false;
+    }
 }
 
 

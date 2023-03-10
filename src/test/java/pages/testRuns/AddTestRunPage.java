@@ -111,20 +111,17 @@ import pages.HomePage;
     }
     @Step("Displayed Message Close Success Locator")
     public void setMessageCloseSuccessLocator(String name) {
-       // waitForElementClickable(MESSAGE_CLOSE_SUCCESS_LOCATOR);
         log.info("Displayed Message Close Success Locator");
         driver.findElement(MESSAGE_CLOSE_SUCCESS_LOCATOR).isDisplayed();
     }
 
     @Step("Click Icon Small Delete Locator")
     public void setIconSmallDeleteLocator(String name) {
-       // waitForElementClickable(ICON_SMALL_DELETE_LOCATOR);
         log.info("Click Icon Small Delete Locator");
         driver.findElement(ICON_SMALL_DELETE_LOCATOR).click();
     }
     @Step("Click Delete Selected Button Locator")
     public void setDeleteSelectedButtonLocator(String name) {
-       // waitForElementClickable(DELETE_SELECTED_BUTTON_LOCATOR);
         log.info("Click Delete Selected Button Locator");
         driver.findElement(DELETE_SELECTED_BUTTON_LOCATOR).click();
     }

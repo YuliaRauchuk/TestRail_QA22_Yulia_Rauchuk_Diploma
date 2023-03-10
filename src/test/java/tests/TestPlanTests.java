@@ -12,7 +12,7 @@ public class TestPlanTests extends BaseTests {
         loginPage.setEmail("rauchukyulia@gmail.com");
         loginPage.setPassword("ZYzBBO5Tm8G7/3JFqEnT");
         loginPage.clickLogInButton();
-        testRunResultsPage.clickTestRunResultsTabLocator();
+       // testRunResultsPage.clickTestRunResultsTab();
         testPlanPage.clickAddTestPlanTabLocator();
         addTestPlanPage.clickTestPlanNameInput("Plan Ray");
         addTestPlanPage. clickReferencesLocator("QWE");

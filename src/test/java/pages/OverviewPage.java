@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 @Log4j2
-public class OverviewPage extends BasePage {
+public class OverviewPage extends HomePage {
     public OverviewPage(WebDriver driver) {
         super(driver);
     }
@@ -57,13 +57,11 @@ public class OverviewPage extends BasePage {
 
     @Step("Click Sidebar Runs Overview Locator")
     public void clickSidebarRunsOverviewLocator() {
-       // waitForElementClickable(SIDEBAR_RUNS_OVERVIEW_LOCATOR);
         log.info("Click Sidebar Runs Overview Locator");
         driver.findElement(SIDEBAR_RUNS_OVERVIEW_LOCATOR).click();
     }
     @Step("Click Sidebar Cases Overview Locator")
     public void clickSidebarCasesOverviewLocator() {
-        //waitForElementClickable(SIDEBAR_CASES_OVERVIEW_LOCATOR);
         log.info("Click Sidebar Cases Overview Locator");
         driver.findElement(SIDEBAR_CASES_OVERVIEW_LOCATOR).click();
     }
