@@ -1,9 +1,7 @@
 package tests;
 
 import lombok.extern.log4j.Log4j2;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.OverviewPage;
 import pages.milestones.AddMilestonesPage;
@@ -16,28 +14,11 @@ public class MilestoneTests extends BaseTests {
     MilestonesPage milestonesPage;
     AddMilestonesPage addMilestonesPage;
 
-    public MilestoneTests(WebDriver driver) {
-        super(driver);
-    }
-
-    @Override
-    public void waitForPageLoaded() {
-
-    }
-    @BeforeClass
-    public void initialise() {
-        overviewPage = new OverviewPage(driver);
-        milestonesPage = new MilestonesPage(driver);
-        addMilestonesPage = new AddMilestonesPage(driver);
-
-    }
 
     @Test(description = "Positive tests Create Milestones", groups = {"Smoke"})
     public void createMilestones() {
-
-        loginPage.waitForLoginPageLoaded();
-        loginPage.setEmailInput("rauchukyulia@gmail.com");
-        loginPage.setPasswordInput("ZYzBBO5Tm8G7/3JFqEnT");
+        loginPage.setEmail("rauchukyulia@gmail.com");
+        loginPage.setPassword("ZYzBBO5Tm8G7/3JFqEnT");
         overviewPage.clickAddMilestonesButtonLocator();
         milestonesPage.clickNameLocator("Ray");
         milestonesPage.clickReferencesLocator("AAA");
@@ -85,7 +66,6 @@ public class MilestoneTests extends BaseTests {
         milestonesPage.clickDeleteCheckboxLocator();
         milestonesPage.clickConfirmationDeleteButtonLocator();
         milestonesPage.clickDeleteButtonLocator();
-        milestonesPage.waitForPageLoaded();
 
         Assert.assertTrue(milestonesPage.isAccessMessageDisplayed(), "Checking for a milestone was deleted");
 

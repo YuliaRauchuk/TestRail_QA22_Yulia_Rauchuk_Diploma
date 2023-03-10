@@ -17,38 +17,36 @@ import org.openqa.selenium.WebDriver;
     private final static By ADD_EXAMPLE_PROJECT_BUTTON_LOCATOR = By.cssSelector("//div//a[2][@class='button button-left button-add']");
     private final static By DROPDOWN_CARET_LOCATOR = By.cssSelector("//span[2][@class='caret']");
     private final static By LOGOUT_BUTTON_LOCATOR = By.cssSelector("//a[@id='navigation-user-logout']");
-    @Override
-    public byte[] waitForPageLoaded() {
-        return new byte[0];
-    }
+
+
     @Step("Dashboard Tab Displayed")
     public void isDashboardTabDisplayed() {
-        waitForElementClickable(DASHBOARD_TAB_LOCATOR);
+        //waitForElementClickable(DASHBOARD_TAB_LOCATOR);
         log.info("Return Dashboard Tab Displayed");
         driver.findElement(DASHBOARD_TAB_LOCATOR).isDisplayed();
     }
     @Step("Click Add Project Button Locator")
     public void clickAddProjectButtonLocator() {
-        waitForElementClickable(ADD_PROJECT_BUTTON_LOCATOR);
+       // waitForElementClickable(ADD_PROJECT_BUTTON_LOCATOR);
         log.info("Return Add Project Button Is Displayed");
         driver.findElement(ADD_PROJECT_BUTTON_LOCATOR).click();
     }
 
     @Step("Add Example Project Button Displayed")
     public void isAddExampleProjectButtonDisplayed() {
-        waitForElementClickable(ADD_EXAMPLE_PROJECT_BUTTON_LOCATOR);
+       // waitForElementClickable(ADD_EXAMPLE_PROJECT_BUTTON_LOCATOR);
         log.info("Return Add Example Project Button Displayed");
         driver.findElement(ADD_EXAMPLE_PROJECT_BUTTON_LOCATOR).isDisplayed();
     }
     @Step("Click Dropdown Caret Locator")
     public void clickDropdownCaretLocator() {
-        waitForElementClickable(DROPDOWN_CARET_LOCATOR);
+       // waitForElementClickable(DROPDOWN_CARET_LOCATOR);
         log.info("Click Dropdown Caret Locator");
         driver.findElement(DROPDOWN_CARET_LOCATOR).click();
     }
     @Step("Click LogOut Button Locator")
     public void clickLogOutButtonLocator() {
-        waitForElementClickable(LOGOUT_BUTTON_LOCATOR);
+      //  waitForElementClickable(LOGOUT_BUTTON_LOCATOR);
         log.info("Click LogOut Button Locator");
         driver.findElement(LOGOUT_BUTTON_LOCATOR).click();
 
@@ -56,5 +54,8 @@ import org.openqa.selenium.WebDriver;
 
     public boolean isAddProjectButtonDisplayed() {
         return false;
+    }
+
+    public void waitForPageLoaded() {
     }
 }

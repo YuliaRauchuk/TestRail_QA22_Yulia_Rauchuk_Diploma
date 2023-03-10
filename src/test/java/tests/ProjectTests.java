@@ -1,24 +1,18 @@
 package tests;
 
 import lombok.extern.log4j.Log4j2;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import static pages.AddNewProjectPage.*;
+
 
 @Log4j2
 public class ProjectTests extends BaseTests {
-    public ProjectTests (WebDriver driver) {
-        super(driver);
-    }
 
     @Test(description = "Positive Create New Project Test", groups = {"Smoke"})
     public void positiveCreateNewProjectTest() {
-        loginPage.waitForLoginPageLoaded();
-        loginPage.setEmailInput("rauchukyulia@gmail.com");
-        loginPage.setPasswordInput("ZYzBBO5Tm8G7/3JFqEnT");
+        loginPage.setEmail("rauchukyulia@gmail.com");
+        loginPage.setPassword("ZYzBBO5Tm8G7/3JFqEnT");
         loginPage.clickLogInButton();
-        dashboardPage.waitForPageLoaded();
         dashboardPage.clickAddProjectButtonLocator();
         addNewProjectPage.setProjectName("Project");
         addNewProjectPage.setAnnouncement("AAA");

@@ -20,62 +20,58 @@ public class AddTestPlanPage extends HomePage {
     private final static By EDIT_BUTTON_LOCATOR = By.cssSelector("//div//a[@class='toolbar-button content-header-button button-responsive button-edit toolbar-button-last']");
     private final static By RERUN_BUTTON_LOCATOR = By.cssSelector("//a//span[@class='button-text']");
 
-    @Override
-    public byte[] waitForPageLoaded() {
 
-        return new byte[0];
-    }
     @Step("Click Test Plan Name Input")
     public void clickTestPlanNameInput(String name) {
-        waitForElementClickable(TEST_PLAN_NAME_INPUT);
+        //waitForElementClickable(TEST_PLAN_NAME_INPUT);
         log.info("Click Test Plan Name Input");
         driver.findElement(TEST_PLAN_NAME_INPUT).sendKeys(name);
     }
     @Step("Click References Locator")
     public void clickReferencesLocator(String name) {
-        waitForElementClickable(REFERENCES_LOCATOR);
+       // waitForElementClickable(REFERENCES_LOCATOR);
         log.info("Click References Locator");
         driver.findElement(REFERENCES_LOCATOR).sendKeys(name);
     }
 
     @Step("Select Milestone Locator")
     public void setMilestoneLocator(String name) {
-        waitForElementClickable(MILESTONE_LOCATOR);
+       // waitForElementClickable(MILESTONE_LOCATOR);
         log.info("Select Milestone Locator");
         driver.findElement(MILESTONE_LOCATOR).sendKeys(name);
     }
 
     @Step("Click Description Locator")
     public void clickDescriptionLocator(String name) {
-        waitForElementClickable(DESCRIPTION_LOCATOR);
+       // waitForElementClickable(DESCRIPTION_LOCATOR);
         log.info("Click Description Locator");
         driver.findElement(DESCRIPTION_LOCATOR).sendKeys(name);
     }
 
     @Step("Click Add Test Plan Button Locator")
     public void clickAddTestPlanButtonLocator() {
-        waitForElementClickable(ADD_TEST_PLAN_BUTTON_LOCATOR);
+        //waitForElementClickable(ADD_TEST_PLAN_BUTTON_LOCATOR);
         log.info("Click Add Test Plan Button Locator");
         driver.findElement(ADD_TEST_PLAN_BUTTON_LOCATOR).click();
     }
 
     @Step("Click Cancel Button Locator")
     public void clickCancelButtonLocator() {
-        waitForElementClickable(CANCEL_BUTTON_LOCATOR);
+        //waitForElementClickable(CANCEL_BUTTON_LOCATOR);
         log.info("Click Cancel Button Locator");
         driver.findElement(CANCEL_BUTTON_LOCATOR).click();
     }
 
     @Step("Displayed Message Success Locator")
     public void isDisplayedMessageSuccessLocator(String s) {
-        waitForElementClickable(MESSAGE_SUCCESS_LOCATOR);
+        //waitForElementClickable(MESSAGE_SUCCESS_LOCATOR);
         log.info("Displayed Message Success Locator");
         driver.findElement(MESSAGE_SUCCESS_LOCATOR).isDisplayed();
     }
 
     @Step("Click Edit Button Locator")
     public void clickEditButtonLocator() {
-        waitForElementClickable(EDIT_BUTTON_LOCATOR);
+        //waitForElementClickable(EDIT_BUTTON_LOCATOR);
         log.info("Click Edit Button Locator");
         driver.findElement(EDIT_BUTTON_LOCATOR).click();
 
@@ -83,7 +79,7 @@ public class AddTestPlanPage extends HomePage {
 
     @Step("Click Rerun Button Locator")
     public void clickRerunButtonLocator() {
-        waitForElementClickable(RERUN_BUTTON_LOCATOR);
+        //waitForElementClickable(RERUN_BUTTON_LOCATOR);
         log.info("Click Rerun Button Locator");
         driver.findElement(RERUN_BUTTON_LOCATOR).click();
 

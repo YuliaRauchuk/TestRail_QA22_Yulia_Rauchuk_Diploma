@@ -12,14 +12,11 @@ public class TestPlanPage extends HomePage {
         super(driver);
     }
     private final static By ADD_TEST_PLAN_TAB_LOCATOR = By.cssSelector("//div[@class='content-header-title page_title']");
-    @Override
-    public byte[] waitForPageLoaded() {
 
-        return new byte[0];
-    }
+
     @Step("Click Add Test Plan Tab Locator")
     public void clickAddTestPlanTabLocator() {
-        waitForElementClickable(ADD_TEST_PLAN_TAB_LOCATOR);
+        //waitForElementClickable(ADD_TEST_PLAN_TAB_LOCATOR);
         log.info("Click Add Test Plan Tab Locator");
         driver.findElement(ADD_TEST_PLAN_TAB_LOCATOR).click();
     }

@@ -38,42 +38,34 @@ public class MilestonesPage extends HomePage {
         super(driver);
     }
 
-    @Override
-    public byte[] waitForPageLoaded() {
 
-        return new byte[0];
-    }
+
     @Step("Enter Name Locator")
     public void clickNameLocator(String name) {
-        waitForElementClickable(NAME_LOCATOR);
         log.info("Enter Name locator");
         driver.findElement(NAME_LOCATOR).sendKeys(name);
     }
 
     @Step("Enter References Locator")
     public void clickReferencesLocator(String name) {
-        waitForElementClickable(REFERENCES_LOCATOR );
         log.info("Enter References Locator");
         driver.findElement(REFERENCES_LOCATOR).sendKeys(name);
     }
 
     @Step("Enter Parent Locator")
     public void clickParentLocator(String name) {
-        waitForElementClickable(PARENT_LOCATOR);
         log.info("Enter Parent Locator");
         driver.findElement(PARENT_LOCATOR).sendKeys(name);
     }
 
     @Step("Click Description Locator")
     public void clickDescriptionLocator(String milestones) {
-        waitForElementClickable(DESCRIPTION_LOCATOR);
         log.info("Click Description Locator");
         driver.findElement(DESCRIPTION_LOCATOR).click();
     }
 
     @Step("Click Start Data")
     public void clickStartData(String s) {
-        waitForElementClickable(START_DATE_LOCATOR);
         log.info("Click Start Data");
         driver.findElement(START_DATE_LOCATOR).click();
 
@@ -81,28 +73,24 @@ public class MilestonesPage extends HomePage {
 
     @Step("Click End Data")
     public void clickEndData(String s) {
-        waitForElementClickable(END_DATA_LOCATOR);
         log.info("Click End Data");
         driver.findElement(END_DATA_LOCATOR).click();
     }
 
     @Step("Click Prev Button Locator")
     public void clickPrevButtonLocator() {
-        waitForElementClickable(PREV_BUTTON_LOCATOR);
         log.info("Click Prev Button Locator");
         driver.findElement(PREV_BUTTON_LOCATOR).click();
     }
 
     @Step("Click Next Button Locator")
     public void clickNextButtonLocator() {
-        waitForElementClickable(NEXT_BUTTON_LOCATOR);
         log.info("Click Next Button Locator");
         driver.findElement(NEXT_BUTTON_LOCATOR).click();
     }
 
     @Step("Click Clear Button Locator")
     public void clickClearButtonLocator() {
-        waitForElementClickable(CLEAR_BUTTON_LOCATOR);
         log.info("Click Clear Button Locator");
         driver.findElement(CLEAR_BUTTON_LOCATOR).click();
 
@@ -110,21 +98,18 @@ public class MilestonesPage extends HomePage {
 
     @Step("Click Done Button Locator")
     public void clickDoneButtonLocator() {
-        waitForElementClickable(DONE_BUTTON_LOCATOR);
         log.info("Click Done Button Locator");
         driver.findElement(DONE_BUTTON_LOCATOR).click();
     }
 
     @Step("Click Checkbox Is Completed Locator")
     public void clickCheckboxIsCompletedLocator() {
-        waitForElementClickable(CHECKBOX_IS_COMPLETED_LOCATOR);
         log.info("Click Checkbox Is Completed Locator");
         driver.findElement(CHECKBOX_IS_COMPLETED_LOCATOR).click();
     }
 
     @Step("Click Accept Button Locator")
     public void clickAcceptButtonLocator() {
-        waitForElementClickable(ACCEPT_BUTTON_LOCATOR);
         log.info("Click Accept Button Locator");
         driver.findElement(ACCEPT_BUTTON_LOCATOR).click();
 
@@ -132,45 +117,38 @@ public class MilestonesPage extends HomePage {
 
     @Step("Displayed Message Success Locator")
     public void isDisplayedMessageSuccessLocator(String s) {
-        waitForElementClickable(MESSAGE_SUCCESS_LOCATOR);
         log.info("Displayed Message Success Locator");
         driver.findElement(MESSAGE_SUCCESS_LOCATOR).isDisplayed();
     }
 
     @Step("Click Edit Milestones Locator")
     public void clickEditMilestonesLocator() {
-        waitForElementClickable(EDIT_MILESTONES_LOCATOR);
         log.info("Click Edit Milestones Locator");
         driver.findElement(EDIT_MILESTONES_LOCATOR).click();
     }
 
     @Step("Click Save Milestones Button Locator")
     public void clickSaveMilestonesButtonLocator() {
-        waitForElementClickable(SAVE_MILESTONES_BUTTON_LOCATOR);
         log.info("Click Save Milestones Button Locator");
         driver.findElement(SAVE_MILESTONES_BUTTON_LOCATOR).click();
     }
     @Step("Displayed Message Updated Milestone Locator")
     public void isDisplayedMessageUpdatedMilestoneLocator(String s) {
-        waitForElementClickable(DISPLAYED_MESSAGE_UPDATED_MILESTONE_LOCATOR);
         log.info("Displayed Message Updated Milestone Locator");
         driver.findElement(DISPLAYED_MESSAGE_UPDATED_MILESTONE_LOCATOR).isDisplayed();
     }
     @Step("Click Select Checkbox Locator")
     public void clickSelectCheckboxLocator() {
-        waitForElementClickable(SELECT_CHECKBOX_LOCATOR);
         log.info("Click Select Checkbox Locator");
         driver.findElement(SELECT_CHECKBOX_LOCATOR).click();
     }
     @Step("Click Delete Icon Locator")
         public void clickDeleteIconLocator() {
-        waitForElementClickable(DELETE_ICON_LOCATOR);
         log.info("Click Delete Icon Locator");
         driver.findElement(DELETE_ICON_LOCATOR).click();
     }
     @Step("Click Delete Selected Button Locator")
     public void clickDeleteSelectedButtonLocator() {
-        waitForElementClickable(DELETE_SELECTED_BUTTON_LOCATOR);
         log.info("Click Delete Selected Button Locator");
         driver.findElement(DELETE_SELECTED_BUTTON_LOCATOR).click();
 
@@ -178,33 +156,28 @@ public class MilestonesPage extends HomePage {
 
     @Step("Click Confirmation Locator")
     public void clickConfirmationLocator() {
-        waitForElementClickable(CONFIRMATION_LOCATOR);
         log.info("Click Confirmation Locator");
         driver.findElement(CONFIRMATION_LOCATOR).click();
 
     }
     @Step("Click Confirmation Delete Button Locator")
     public void clickConfirmationDeleteButtonLocator() {
-        waitForElementClickable(CONFIRMATION_DELETE_BUTTON_LOCATOR);
         log.info("Click Confirmation Delete Button Locator");
         driver.findElement(CONFIRMATION_DELETE_BUTTON_LOCATOR).click();
 
     }
     @Step("Click Delete Checkbox Locator")
     public void clickDeleteCheckboxLocator() {
-        waitForElementClickable(DELETE_CHECKBOX_LOCATOR);
         log.info("Click Delete Checkbox Locator");
         driver.findElement(DELETE_CHECKBOX_LOCATOR).click();
     }
     @Step("Click Cancel Button Locator")
     public void clickCancelButtonLocator() {
-        waitForElementClickable(CANCEL_BUTTON_LOCATOR);
         log.info("Click Cancel Button Locator");
         driver.findElement(CANCEL_BUTTON_LOCATOR).click();
 }
     @Step("Click Delete Button Locator")
     public void clickDeleteButtonLocator() {
-        waitForElementClickable(DELETE_BUTTON_LOCATOR);
         log.info("Click Delete Button Locator");
         driver.findElement(DELETE_BUTTON_LOCATOR).click();
     }

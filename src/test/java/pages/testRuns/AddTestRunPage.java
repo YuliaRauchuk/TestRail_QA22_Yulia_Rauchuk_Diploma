@@ -30,105 +30,101 @@ import pages.HomePage;
     private final static By ICON_SMALL_DELETE_LOCATOR = By.cssSelector("//a//div[@class='icon-small-delete']");
     private final static By DELETE_SELECTED_BUTTON_LOCATOR = By.cssSelector("//a//span[@class='button button-negative button-delete']");
 
-    @Override
-    public byte[] waitForPageLoaded() {
 
-        return new byte[0];
-    }
     @Step("Click Test Run Input")
     public void setTestRunNameInput(String name) {
-        waitForElementClickable(TEST_RUN_NAME_INPUT);
+        //waitForElementClickable(TEST_RUN_NAME_INPUT);
         log.info("Click Test Run Input");
         driver.findElement(TEST_RUN_NAME_INPUT).sendKeys(name);
     }
     @Step("Setting References Locator")
     public void setReferencesLocator(String name) {
-        waitForElementClickable(REFERENCES_LOCATOR);
+       // waitForElementClickable(REFERENCES_LOCATOR);
         log.info("Setting References Locator");
         driver.findElement(REFERENCES_LOCATOR).sendKeys(name);
     }
     @Step("Click Milestones Locator")
     public void setMilestoneLocator() {
-        waitForElementClickable(MILESTONE_LOCATOR);
+        //waitForElementClickable(MILESTONE_LOCATOR);
         log.info("Click Milestones Locator");
         driver.findElement(MILESTONE_LOCATOR).click();
     }
     @Step("Click Assign To Locator")
     public void setAssignToLocator() {
-        waitForElementClickable(ASSIGN_TO_LOCATOR);
+        //waitForElementClickable(ASSIGN_TO_LOCATOR);
         log.info("Click Assign To Locator");
         driver.findElement(ASSIGN_TO_LOCATOR).click();
     }
     @Step("Setting Description Locator")
     public void setDescriptionLocator(String name) {
-        waitForElementClickable(DESCRIPTION_LOCATOR);
+       // waitForElementClickable(DESCRIPTION_LOCATOR);
         log.info("Setting Description Locator");
         driver.findElement(DESCRIPTION_LOCATOR).sendKeys(name);
     }
     @Step("Click Include All Test Cases Locator")
     public void setIncludeAllTestCasesLocator() {
-        waitForElementClickable(INCLUDE_ALL_TEST_CASES_LOCATOR);
+        //waitForElementClickable(INCLUDE_ALL_TEST_CASES_LOCATOR);
         log.info("Click Include All Test Cases Locator");
         driver.findElement(INCLUDE_ALL_TEST_CASES_LOCATOR).click();
     }
     @Step("Click Add Test Run Button Locator")
     public void setAddTestRunButtonLocator(String name) {
-        waitForElementClickable(ADD_TEST_RUN_BUTTON_LOCATOR);
+        //waitForElementClickable(ADD_TEST_RUN_BUTTON_LOCATOR);
         log.info("Click Add Test Run Button Locator");
         driver.findElement(ADD_TEST_RUN_BUTTON_LOCATOR).click();
     }
     @Step("Click Cancel Button")
     public void setCancelButton(String name) {
-        waitForElementClickable(CANCEL_BUTTON );
+       // waitForElementClickable(CANCEL_BUTTON );
         log.info("Click Cancel Button");
         driver.findElement(CANCEL_BUTTON ).click();
     }
     @Step("Displayed Message Success Locator")
     public void setMessageSuccessLocator(String name) {
-        waitForElementClickable(MESSAGE_SUCCESS_LOCATOR);
+       // waitForElementClickable(MESSAGE_SUCCESS_LOCATOR);
         log.info("Displayed Message Success Locator");
         driver.findElement(MESSAGE_SUCCESS_LOCATOR).isDisplayed();
     }
     @Step("Click Edit Test Run Button")
     public void setEditTestRunButton(String name) {
-        waitForElementClickable(EDIT_TEST_RUN_BUTTON);
+        //waitForElementClickable(EDIT_TEST_RUN_BUTTON);
         log.info("Click Edit Test Run Button");
         driver.findElement(EDIT_TEST_RUN_BUTTON).click();
     }
     @Step("Click Close Test Run Button")
     public void setCloseTestRunButton(String name) {
-        waitForElementClickable(CLOSE_TEST_RUN_BUTTON);
+        //waitForElementClickable(CLOSE_TEST_RUN_BUTTON);
         log.info("Click Close Test Run Button");
         driver.findElement(CLOSE_TEST_RUN_BUTTON).click();
     }
     @Step("Click Conformation Button Yes")
     public void setConformationButtonYes(String name) {
-        waitForElementClickable(CONFORMATION_BUTTON_YES);
+       // waitForElementClickable(CONFORMATION_BUTTON_YES);
         log.info("Click Conformation Button Yes");
         driver.findElement(CONFORMATION_BUTTON_YES).click();
     }
     @Step("Click Conformation Button No")
     public void setConformationButtonNo(String name) {
-        waitForElementClickable(CONFORMATION_BUTTON_NO);
+        //waitForElementClickable(CONFORMATION_BUTTON_NO);
         log.info("Click Conformation Button No");
         driver.findElement(CONFORMATION_BUTTON_NO).click();
     }
     @Step("Displayed Message Close Success Locator")
     public void setMessageCloseSuccessLocator(String name) {
-        waitForElementClickable(MESSAGE_CLOSE_SUCCESS_LOCATOR);
+       // waitForElementClickable(MESSAGE_CLOSE_SUCCESS_LOCATOR);
         log.info("Displayed Message Close Success Locator");
         driver.findElement(MESSAGE_CLOSE_SUCCESS_LOCATOR).isDisplayed();
     }
 
     @Step("Click Icon Small Delete Locator")
     public void setIconSmallDeleteLocator(String name) {
-        waitForElementClickable(ICON_SMALL_DELETE_LOCATOR);
+       // waitForElementClickable(ICON_SMALL_DELETE_LOCATOR);
         log.info("Click Icon Small Delete Locator");
         driver.findElement(ICON_SMALL_DELETE_LOCATOR).click();
     }
     @Step("Click Delete Selected Button Locator")
     public void setDeleteSelectedButtonLocator(String name) {
-        waitForElementClickable(DELETE_SELECTED_BUTTON_LOCATOR);
+       // waitForElementClickable(DELETE_SELECTED_BUTTON_LOCATOR);
         log.info("Click Delete Selected Button Locator");
         driver.findElement(DELETE_SELECTED_BUTTON_LOCATOR).click();
     }

@@ -14,15 +14,11 @@ public class ProjectPage extends HomePage {
 
     private final static By ADD_PROJECT_TAB_LOCATOR = By.cssSelector("//div//div[@class='content-header-title page_title']");
 
-    @Override
-    public byte[] waitForPageLoaded() {
 
-        return new byte[0];
-    }
 
     @Step("Click Add Project Tab Locator")
     public void clickAddProjectTabLocator() {
-        waitForElementClickable(ADD_PROJECT_TAB_LOCATOR);
+        //waitForElementClickable(ADD_PROJECT_TAB_LOCATOR);
         log.info("Click Add Project Tab Locator");
         driver.findElement(ADD_PROJECT_TAB_LOCATOR).click();
     }

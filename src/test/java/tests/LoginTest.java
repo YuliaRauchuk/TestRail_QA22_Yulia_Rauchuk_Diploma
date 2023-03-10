@@ -1,39 +1,23 @@
 package tests;
 
 import lombok.extern.log4j.Log4j2;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
-import pages.LoginPage;
 import pages.OverviewPage;
-import pages.milestones.AddMilestonesPage;
-import pages.milestones.MilestonesPage;
+
 
 
 @Log4j2
 public class LoginTest extends BaseTests {
-    public LoginTest(WebDriver driver) {
-        super(driver);
-    }
 
-    @Override
-    public void waitForPageLoaded() {
-    }
-    @BeforeClass
-    public void initialise() {
-
-        overviewPage = new OverviewPage(driver);
-        loginPage = new LoginPage(driver);
-        dashboardPage = new DashboardPage(driver);
-    }
-
-    @Test(description = "Positive Login Test", groups = {"Smoke"})
+    @Test(description = "Positive Login Test", groups = {"all", "positive"})
     public void loginTests() {
-        loginPage.waitForLoginPageLoaded();
-        loginPage.setEmailInput("rauchukyulia@gmail.com");
-        loginPage.setPasswordInput("ZYzBBO5Tm8G7/3JFqEnT");
+        loginPage.setEmail("rauchukyulia@gmail.com");
+        loginPage.setPassword("ZYzBBO5Tm8G7/3JFqEnT");
         loginPage.clickLogInButton();
         dashboardPage.waitForPageLoaded();
 
@@ -41,27 +25,26 @@ public class LoginTest extends BaseTests {
 
     }
 
-    @Test(description = "Negative Login Tests", groups = {"Negative"})
+    @Test(description = "Negative Login Tests", groups = {"all", "negative"})
     public void negativeLoginTests() {
-        loginPage.waitForLoginPageLoaded();
-        loginPage.setEmailInput("rauchukyulia@gmail.com");
-        loginPage.setPasswordInput("password");
+
+        loginPage.setEmail("rauchukyulia@gmail.com");
+        loginPage.setPassword("password");
         loginPage.clickLogInButton();
 
-        Assert.assertTrue(loginPage.getPasswordErrorMessage(""), "Checking for an error message");
+
+        Assert.assertTrue(loginPage.isErrorMessagePresent());
 
     }
     @Test(description = "Positive LogOut Tests", groups = {"Smoke"})
     public void positiveLogOutTests() {
-        loginPage.waitForLoginPageLoaded();
-        loginPage.setEmailInput("rauchukyulia@gmail.com");
-        loginPage.setPasswordInput("ZYzBBO5Tm8G7/3JFqEnT");
+
+        loginPage.setEmail("rauchukyulia@gmail.com");
+        loginPage.setPassword("ZYzBBO5Tm8G7/3JFqEnT");
         loginPage.clickLogInButton();
-        dashboardPage.waitForPageLoaded();
         dashboardPage.clickDropdownCaretLocator();
         dashboardPage.clickLogOutButtonLocator();
-        dashboardPage.isDisplayedFormLoginPage();
 
-        Assert.assertTrue(loginPage.isMessageDisplayed(), "Checking for logout");
-}
+        Assert.assertTrue(loginPage.isBotColumnPresent());
+    }
 }
